@@ -144,16 +144,16 @@ button, .button {
   display: block;
 }
 
-.header.open .header__menu > span:first-child {
+.header.open .header__toggle > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.header.open .header__menu > span:nth-child(2) {
+.header.open .header__toggle > span:nth-child(2) {
   opacity: 0;
 }
 
-.header.open .header__menu > span:last-child {
+.header.open .header__toggle > span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -167,7 +167,7 @@ button, .button {
   height: 1.375rem;
 }
 
-.header__menu > span {
+.header__toggle > span {
   display: block;
   width: 26px;
   height: 2px;
@@ -178,8 +178,20 @@ button, .button {
           transform-origin: 3px 1px;
 }
 
-.header__menu > span:not(:last-child) {
+.header__toggle > span:not(:last-child) {
   margin-bottom: 5px;
+}
+
+.header__menu {
+  background: white;
+  padding: 1.625rem;
+}
+
+.header__menu a {
+  display: block;
+  padding: 0.625rem;
+  color: #2d314d;
+  text-align: center;
 }
 
 .header__links a {
@@ -229,6 +241,7 @@ button, .button {
 }
 
 .overlay {
+  opacity: 0;
   position: fixed;
   top: 60px;
   right: 0px;
